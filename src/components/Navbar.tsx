@@ -1,6 +1,7 @@
 import React from "react";
 import dayjs from "dayjs";
-import { navIcons, navLinks } from "../constants";
+import { navIcons, navLinks } from "#constants/index";
+import type { NavLink } from "#constants/index";
 
 const Navbar = () => {
   return (
@@ -10,7 +11,7 @@ const Navbar = () => {
         <p className="font-bold">My macOS Portfolio</p>
 
         <ul>
-          {navLinks.map((item) => (
+          {navLinks.map((item: NavLink) => (
             <li key={item.id}>
               <p>{item.name}</p>
             </li>
@@ -19,7 +20,7 @@ const Navbar = () => {
       </div>
       <div>
         <ul>
-          {navIcons.map(({ id, img }) => (
+          {navIcons.map(({ id, img }: { id: number; img: string }) => (
             <li key={id}>
               <img src={img} className="icon-hover" alt={`icon-${id}`} />
             </li>

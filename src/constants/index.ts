@@ -1,4 +1,54 @@
-const navLinks = [
+export interface NavLink {
+  id: number;
+  name: string;
+  type: string;
+}
+
+export interface NavIcon {
+  id: number;
+  img: string;
+}
+
+export interface DockApp {
+  id: string;
+  name: string;
+  icon: string;
+  canOpen: boolean;
+}
+
+export interface BlogPost {
+  id: number;
+  date: string;
+  title: string;
+  image: string;
+  link: string;
+}
+
+export interface TechCategory {
+  category: string;
+  items: string[];
+}
+
+export interface Social {
+  id: number;
+  text: string;
+  icon: string;
+  bg: string;
+  link: string;
+}
+
+export interface PhotosLink {
+  id: number;
+  icon: string;
+  title: string;
+}
+
+export interface GalleryItem {
+  id: number;
+  img: string;
+}
+
+const navLinks: NavLink[] = [
   {
     id: 1,
     name: "Projects",
@@ -16,7 +66,7 @@ const navLinks = [
   },
 ];
 
-const navIcons = [
+const navIcons: NavIcon[] = [
   {
     id: 1,
     img: "/icons/wifi.svg",
@@ -35,7 +85,7 @@ const navIcons = [
   },
 ];
 
-const dockApps = [
+const dockApps: DockApp[] = [
   {
     id: "finder",
     name: "Portfolio", // was "Finder"
@@ -74,7 +124,7 @@ const dockApps = [
   },
 ];
 
-const blogPosts = [
+const blogPosts: BlogPost[] = [
   {
     id: 1,
     date: "Sep 2, 2025",
@@ -99,7 +149,7 @@ const blogPosts = [
   },
 ];
 
-const techStack = [
+const techStack: TechCategory[] = [
   {
     category: "Frontend",
     items: ["React.js", "Next.js", "TypeScript"],
@@ -126,7 +176,7 @@ const techStack = [
   },
 ];
 
-const socials = [
+const socials: Social[] = [
   {
     id: 1,
     text: "Github",
@@ -157,7 +207,7 @@ const socials = [
   },
 ];
 
-const photosLinks = [
+const photosLinks: PhotosLink[] = [
   {
     id: 1,
     icon: "/icons/gicon1.svg",
@@ -185,7 +235,7 @@ const photosLinks = [
   },
 ];
 
-const gallery = [
+const gallery: GalleryItem[] = [
   {
     id: 1,
     img: "/images/gal1.png",
