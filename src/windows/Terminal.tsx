@@ -28,7 +28,7 @@ const Terminal = () => {
               <h3>{category}</h3>
               <ul>
                 {items.map((item: string, index: number) => (
-                  <li key={index}>
+                  <li key={item}>
                     {item}
                     {index < items.length - 1 ? "," : ""}
                   </li>

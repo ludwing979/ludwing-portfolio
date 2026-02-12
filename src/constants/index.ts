@@ -160,7 +160,7 @@ const techStack: TechCategory[] = [
   },
   {
     category: "Testing",
-    items: ["Jest", "Cypress", "Junit"],
+    items: ["Jest", "Cypress", "JUnit"],
   },
   {
     category: "Styling",
