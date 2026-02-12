@@ -103,7 +103,7 @@ function Welcome(): JSX.Element {
         {renderText("portfolio.", "text-9xl italic font-georama")}
       </h1>
       <div className="small-screen">
-        <p>This Portfolio is designed for desktop/tabled screens only.</p>
+        <p>This Portfolio is designed for desktop/tablet screens only.</p>
       </div>
     </section>
   );
