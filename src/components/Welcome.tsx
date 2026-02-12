@@ -76,7 +76,7 @@ const setupTextHover = (
   };
 };
 
-function Welcome(): JSX.Element {
+const Welcome = (): JSX.Element => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
 
@@ -107,6 +107,6 @@ function Welcome(): JSX.Element {
       </div>
     </section>
   );
-}
+};
 
 export default Welcome;
