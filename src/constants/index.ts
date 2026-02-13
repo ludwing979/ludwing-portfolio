@@ -48,6 +48,43 @@ export interface GalleryItem {
   img: string;
 }
 
+export type FileKind = "file" | "folder";
+
+export interface BaseItem {
+  id: number;
+  name: string;
+  icon: string;
+  kind: FileKind;
+  position?: string;
+  windowPosition?: string;
+  // optional file-specific fields
+  fileType?: "txt" | "url" | "img" | "fig" | "pdf";
+  href?: string;
+  imageUrl?: string;
+  description?: string[];
+  subtitle?: string;
+}
+
+export interface FolderItem extends BaseItem {
+  kind: "folder";
+  children: Array<Location | BaseItem>;
+}
+
+export interface FileItem extends BaseItem {
+  kind: "file";
+}
+
+export interface Location extends FolderItem {
+  type: "work" | "about" | "resume" | "trash";
+}
+
+export type LocationsMap = {
+  work: Location;
+  about: Location;
+  resume: Location;
+  trash: Location;
+};
+
 const navLinks: NavLink[] = [
   {
     id: 1,
@@ -172,7 +209,7 @@ const techStack: TechCategory[] = [
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub", ],
+    items: ["Git", "GitHub"],
   },
 ];
 
@@ -265,7 +302,7 @@ export {
   gallery,
 };
 
-const WORK_LOCATION = {
+const WORK_LOCATION: Location = {
   id: 1,
   type: "work",
   name: "Work",
@@ -433,7 +470,7 @@ const WORK_LOCATION = {
   ],
 };
 
-const ABOUT_LOCATION = {
+const ABOUT_LOCATION: Location = {
   id: 2,
   type: "about",
   name: "About me",
@@ -475,7 +512,7 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      imageUrl: "/images/adrian.jpg",
       description: [
         "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
         "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
@@ -486,7 +523,7 @@ const ABOUT_LOCATION = {
   ],
 };
 
-const RESUME_LOCATION = {
+const RESUME_LOCATION: Location = {
   id: 3,
   type: "resume",
   name: "Resume",
@@ -505,7 +542,7 @@ const RESUME_LOCATION = {
   ],
 };
 
-const TRASH_LOCATION = {
+const TRASH_LOCATION: Location = {
   id: 4,
   type: "trash",
   name: "Trash",
@@ -533,7 +570,7 @@ const TRASH_LOCATION = {
   ],
 };
 
-export const locations = {
+export const locations: LocationsMap = {
   work: WORK_LOCATION,
   about: ABOUT_LOCATION,
   resume: RESUME_LOCATION,

@@ -5,7 +5,7 @@ import { Draggable } from "gsap/all";
 import React, { useLayoutEffect, useRef } from "react";
 
 const WindowWrapper = (Component: React.ComponentType, windowKey: string) => {
-  const Wrapped = (props: any) => {
+  const Wrapped = (props: React.ComponentProps<typeof Component>) => {
     const { focusWindow, windows } = useWindowStore();
     const { isOpen, zIndex } = windows[windowKey] || {};
     const ref = useRef<HTMLDivElement>(null);

@@ -14,8 +14,8 @@ interface WindowStore {
   windows: WindowConfig;
   nextZIndex: number;
   openWindow: (windowKey: string, data?: any) => void;
-  closeWindow: (windowKey: string, data?: any) => void;
-  focusWindow: (windowKey: string, data?: any) => void;
+  closeWindow: (windowKey: string) => void;
+  focusWindow: (windowKey: string) => void;
 }
 
 const useWindowStore = create<WindowStore>()(
