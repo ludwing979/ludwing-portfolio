@@ -23,6 +23,8 @@
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "dir",
     "jsx": "react-jsx",
 
     /* Linting */
