@@ -1,6 +1,6 @@
-import { locations, type BaseItem, type Location } from "#constants/index";
-import useLocationStore from "#store/Location";
-import useWindowStore from "#store/window";
+import { locations, type BaseItem, type Location } from "../constants/index";
+import useLocationStore from "../store/Location";
+import useWindowStore from "../store/window";
 import { useGSAP } from "@gsap/react";
 import clsx from "clsx";
 import { Draggable } from "gsap/all";

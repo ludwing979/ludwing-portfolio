@@ -1,9 +1,9 @@
-import React, { useRef, type JSX } from "react";
+import { useRef, type JSX } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Tooltip } from "react-tooltip";
-import { dockApps, type DockApp } from "#constants/index";
-import useWindowStore from "#store/window";
+import { dockApps, type DockApp } from "../constants/index";
+import useWindowStore from "../store/window";
 
 const Dock = (): JSX.Element => {
   const { openWindow, closeWindow, windows } = useWindowStore();

@@ -1,6 +1,6 @@
-import useWindowStore from "#store/window";
-import WindowWrapper from "#hoc/WindowWrapper";
-import { WindowControls } from "#components/index";
+import useWindowStore from "../store/window";
+import WindowWrapper from "../hoc/WindowWrapper";
+import { WindowControls } from "../components/index";
 
 interface ImageFileData {
   name: string;

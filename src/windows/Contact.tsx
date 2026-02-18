@@ -1,6 +1,6 @@
-import WindowControls from "#components/WindowControls";
-import { socials, type Social } from "#constants/index";
-import WindowWrapper from "#hoc/WindowWrapper";
+import { WindowControls } from "../components/index";
+import { socials, type Social } from "../constants/index";
+import WindowWrapper from "../hoc/WindowWrapper";
 
 const Contact = () => {
   return (

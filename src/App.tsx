@@ -1,9 +1,15 @@
 import gsap from "gsap";
 import { Draggable } from "gsap/all";
-import { Dock, Navbar, Welcome, Home } from "#components/index";
-import Terminal from "#windows/Terminal";
-import Safari from "#windows/Safari";
-import { Finder, Resume, Text, Image, Contact } from "./windows";
+import { Dock, Navbar, Welcome, Home } from "./components";
+import {
+  Finder,
+  Resume,
+  Text,
+  Image,
+  Contact,
+  Terminal,
+  Safari,
+} from "./windows";
 
 gsap.registerPlugin(Draggable);
 
