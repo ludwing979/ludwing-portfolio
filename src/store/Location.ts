@@ -1,6 +1,6 @@
 import { create, type StoreApi, type UseBoundStore } from "zustand";
 import { immer } from "zustand/middleware/immer";
-import { locations, type Location } from "#constants/index";
+import { locations, type Location } from "../constants/index";
 
 const DEFAULT_LOCATION = locations.work;
 
